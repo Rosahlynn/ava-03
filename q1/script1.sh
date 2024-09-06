@@ -38,10 +38,10 @@ case $op in
             ;;
         3)
            
-            home_dir=$(getent passwd "$us" | cut -d: -f6)
-            if [ -d "$home_dir" ]; then
+            ho=$(getent passwd "$us" | cut -d: -f6)
+            if [ -d "$ho" ]; then
                 echo "Arquivos da pasta home do usuário '$us':"
-                ls "$home_dir"
+                ls "$ho"
             else
                 echo "Erro: A pasta home do usuário '$us' não foi encontrada."
             fi
